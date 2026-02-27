@@ -7,13 +7,9 @@ async function bootstrap() {
 
   // Cấu hình Swagger
   const config = new DocumentBuilder()
-    .setTitle('English Learning API')
+    .setTitle('Effortless English Learning API')
     .setDescription('API cho ứng dụng học tiếng Anh')
     .setVersion('1.0')
-    .addTag('courses')
-    .addTag('lessons')
-    .addTag('audios')
-    .addTag('lyrics')
     .build();
 
   const document = SwaggerModule.createDocument(app, config);

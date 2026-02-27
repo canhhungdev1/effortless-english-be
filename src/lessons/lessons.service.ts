@@ -2,25 +2,21 @@ import { Injectable } from '@nestjs/common';
 import { InjectRepository } from '@nestjs/typeorm';
 import { Repository } from 'typeorm';
 import { Lesson } from './lesson.entity';
+import { LessonAudio } from 'src/lesson-audio/lesson-audio.entity';
 
 @Injectable()
 export class LessonsService {
   constructor(
     @InjectRepository(Lesson)
     private lessonRepo: Repository<Lesson>,
+
+    @InjectRepository(LessonAudio)
+    private lessonAudio: Repository<LessonAudio>,
   ) {}
 
-  async getLessons(courseId: number) {
-    return this.lessonRepo.find({
-      where: { course: { id: courseId } }, // dùng relation
-      order: { id: 'ASC' },
-    });
-  }
-
-  async getDetail(id: number) {
-    return this.lessonRepo.findOne({
-      where: { id },
-      relations: ['audios', 'audios.texts'],
+  async getAudios(lessonId: number) {
+    return this.lessonAudio.find({
+      where: { lesson: { id: lessonId } }, // dùng relation
     });
   }
 }
