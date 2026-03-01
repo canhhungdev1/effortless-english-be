@@ -7,7 +7,7 @@ import {
   JoinColumn,
 } from 'typeorm';
 import { Course } from '../courses/course.entity';
-import { LessonAudio } from '../lesson-audio/lesson-audio.entity';
+import { Audio } from '../audios/audio.entity';
 
 @Entity('lesson')
 export class Lesson {
@@ -27,6 +27,6 @@ export class Lesson {
   @JoinColumn({ name: 'course_id' })
   course: Course;
 
-  @OneToMany(() => LessonAudio, (audio) => audio.lesson)
-  audios: LessonAudio[];
+  @OneToMany(() => Audio, (audio) => audio.lesson)
+  audios: Audio[];
 }

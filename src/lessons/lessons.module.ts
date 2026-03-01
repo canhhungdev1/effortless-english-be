@@ -3,12 +3,12 @@ import { LessonsService } from './lessons.service';
 import { LessonsController } from './lessons.controller';
 import { TypeOrmModule } from '@nestjs/typeorm';
 import { Lesson } from './lesson.entity';
-import { LessonAudio } from 'src/lesson-audio/lesson-audio.entity';
-import { LessonAudioText } from 'src/lesson-audio-text/lesson-audio-text.entity';
+import { AudioSubtitle } from 'src/audio-subtitles/audio-subtitle.entity';
+import { Audio } from 'src/audios/audio.entity';
 
 @Module({
   imports: [
-    TypeOrmModule.forFeature([Lesson, LessonAudio, LessonAudioText]),
+    TypeOrmModule.forFeature([Lesson, Audio, AudioSubtitle]),
   ],
   providers: [LessonsService],
   controllers: [LessonsController]

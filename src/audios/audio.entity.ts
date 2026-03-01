@@ -1,16 +1,17 @@
+import { AudioSubtitle } from 'src/audio-subtitles/audio-subtitle.entity';
 import {
-  Entity,
-  PrimaryGeneratedColumn,
   Column,
+  Entity,
+  JoinColumn,
   ManyToOne,
   OneToMany,
-  JoinColumn,
+  PrimaryGeneratedColumn,
 } from 'typeorm';
 import { Lesson } from '../lessons/lesson.entity';
-import { LessonAudioText } from 'src/lesson-audio-text/lesson-audio-text.entity';
 
-@Entity('lesson_audio')
-export class LessonAudio {
+
+@Entity('audio')
+export class Audio {
   @PrimaryGeneratedColumn({ name: 'id' })
   id: number;
 
@@ -27,6 +28,6 @@ export class LessonAudio {
   @JoinColumn({ name: 'lesson_id' })
   lesson: Lesson;
 
-  @OneToMany(() => LessonAudioText, (text) => text.audio)
-  texts: LessonAudioText[];
+  @OneToMany(() => AudioSubtitle, (subtitle) => subtitle.audio)
+  subtitles: AudioSubtitle[];
 }

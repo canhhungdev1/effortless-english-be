@@ -1,6 +1,6 @@
 import { Module } from '@nestjs/common';
-import { LessonAudioTextService } from './lesson-audio-text.service';
-import { LessonAudioTextController } from './lesson-audio-text.controller';
+import { LessonAudioTextService } from './audio-subtitle.service';
+import { LessonAudioTextController } from './audio-subtitle.controller';
 
 @Module({
   providers: [LessonAudioTextService],
