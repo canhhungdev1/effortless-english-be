@@ -3,7 +3,7 @@ import { TypeOrmModule } from '@nestjs/typeorm';
 import { Course } from './course.entity';
 import { CoursesController } from './courses.controller';
 import { CoursesService } from './courses.service';
-import { Lesson } from 'src/lessons/lesson.entity';
+import { Lesson } from 'src/modules/lessons/lesson.entity';
 
 @Module({
   imports: [TypeOrmModule.forFeature([Course, Lesson])],

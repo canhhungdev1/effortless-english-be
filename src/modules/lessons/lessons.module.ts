@@ -3,8 +3,8 @@ import { LessonsService } from './lessons.service';
 import { LessonsController } from './lessons.controller';
 import { TypeOrmModule } from '@nestjs/typeorm';
 import { Lesson } from './lesson.entity';
-import { AudioSubtitle } from 'src/audio-subtitles/audio-subtitle.entity';
-import { Audio } from 'src/audios/audio.entity';
+import { AudioSubtitle } from 'src/modules/audio-subtitles/audio-subtitle.entity';
+import { Audio } from 'src/modules/audios/audio.entity';
 
 @Module({
   imports: [

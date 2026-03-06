@@ -1,4 +1,4 @@
-import { AudioSubtitle } from 'src/audio-subtitles/audio-subtitle.entity';
+import { AudioSubtitle } from 'src/modules/audio-subtitles/audio-subtitle.entity';
 import {
   Column,
   Entity,

@@ -2,7 +2,7 @@ import { Injectable } from '@nestjs/common';
 import { InjectRepository } from '@nestjs/typeorm';
 import { Repository } from 'typeorm';
 import { Lesson } from './lesson.entity';
-import { Audio } from 'src/audios/audio.entity';
+import { Audio } from 'src/modules/audios/audio.entity';
 
 @Injectable()
 export class LessonsService {

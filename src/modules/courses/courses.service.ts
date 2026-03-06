@@ -2,7 +2,7 @@ import { Injectable } from '@nestjs/common';
 import { InjectRepository } from '@nestjs/typeorm';
 import { Course } from './course.entity';
 import { Repository } from 'typeorm';
-import { Lesson } from 'src/lessons/lesson.entity';
+import { Lesson } from 'src/modules/lessons/lesson.entity';
 
 @Injectable()
 export class CoursesService {

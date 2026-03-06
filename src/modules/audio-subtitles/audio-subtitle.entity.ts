@@ -1,4 +1,4 @@
-import { Audio } from 'src/audios/audio.entity';
+import { Audio } from 'src/modules/audios/audio.entity';
 import {
   Entity,
   PrimaryGeneratedColumn,
@@ -7,7 +7,7 @@ import {
   JoinColumn,
 } from 'typeorm';
 
-@Entity('lesson_audio_text')
+@Entity('audio_subtitle')
 export class AudioSubtitle {
   @PrimaryGeneratedColumn({ name: 'id' })
   id: number;
@@ -25,6 +25,6 @@ export class AudioSubtitle {
   order: number;
 
   @ManyToOne(() => Audio, (audio) => audio.subtitles)
-  @JoinColumn({ name: 'lesson_audio_id' })
+  @JoinColumn({ name: 'audio_id' })
   audio: Audio;
 }
