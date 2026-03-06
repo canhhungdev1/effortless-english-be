@@ -1,9 +1,9 @@
 import { Module } from '@nestjs/common';
-import { LessonAudioTextService } from './audio-subtitle.service';
-import { LessonAudioTextController } from './audio-subtitle.controller';
+import { AudioSubtitleService } from './audio-subtitle.service';
+import { AudioSubtitleController } from './audio-subtitle.controller';
 
 @Module({
-  providers: [LessonAudioTextService],
-  controllers: [LessonAudioTextController]
+  providers: [AudioSubtitleService],
+  controllers: [AudioSubtitleController]
 })
-export class LessonAudioTextModule {}
+export class AudioSubtitleModule {}

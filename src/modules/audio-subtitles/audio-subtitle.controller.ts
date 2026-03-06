@@ -1,4 +1,7 @@
 import { Controller } from '@nestjs/common';
 
-@Controller('lesson-audio-text')
-export class LessonAudioTextController {}
+@Controller('audio-subtitles')
+export class AudioSubtitleController {
+
+
+}

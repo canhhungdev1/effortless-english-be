@@ -1,9 +1,9 @@
 import { Module } from '@nestjs/common';
-import { LessonAudioService } from './audio.service';
-import { LessonAudioController } from './audio.controller';
+import { AudioService } from './audio.service';
+import { AudioController } from './audio.controller';
 
 @Module({
-  providers: [LessonAudioService],
-  controllers: [LessonAudioController]
+  providers: [AudioService],
+  controllers: [AudioController]
 })
-export class LessonAudioModule {}
+export class AudioModule {}
