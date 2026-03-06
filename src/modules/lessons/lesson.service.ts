@@ -5,7 +5,7 @@ import { Lesson } from './lesson.entity';
 import { Audio } from 'src/modules/audios/audio.entity';
 
 @Injectable()
-export class LessonsService {
+export class LessonService {
   constructor(
     @InjectRepository(Lesson)
     private lessonRepo: Repository<Lesson>,

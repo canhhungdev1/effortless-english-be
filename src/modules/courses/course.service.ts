@@ -5,7 +5,7 @@ import { Repository } from 'typeorm';
 import { Lesson } from 'src/modules/lessons/lesson.entity';
 
 @Injectable()
-export class CoursesService {
+export class CourseService {
   constructor(
     @InjectRepository(Course)
     private courseRepo: Repository<Course>,

@@ -3,14 +3,9 @@ import { ConfigModule } from '@nestjs/config';
 import { TypeOrmModule } from '@nestjs/typeorm';
 import { AppController } from './app.controller';
 import { AppService } from './app.service';
-import { AudioSubtitle } from './modules/audio-subtitles/audio-subtitle.entity';
-import { Audio } from './modules/audios/audio.entity';
-import { Course } from './modules/courses/course.entity';
-import { CoursesModule } from './modules/courses/courses.module';
-import { Lesson } from './modules/lessons/lesson.entity';
-import { LessonsModule } from './modules/lessons/lessons.module';
-import { User } from './modules/users/user.entity';
 import { databaseConfig } from './config/database.config';
+import { CourseModule } from './modules/courses/course.module';
+import { LessonModule } from './modules/lessons/lesson.module';
 
 @Module({
   imports: [
@@ -20,8 +15,8 @@ import { databaseConfig } from './config/database.config';
     }),
 
     TypeOrmModule.forRoot(databaseConfig),
-    LessonsModule,
-    CoursesModule,
+    LessonModule,
+    CourseModule,
   ],
   controllers: [AppController],
   providers: [AppService],

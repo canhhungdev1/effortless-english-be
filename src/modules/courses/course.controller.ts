@@ -1,10 +1,10 @@
 import { Controller, Get, Param } from '@nestjs/common';
-import { CoursesService } from './courses.service';
+import { CourseService } from './course.service';
 import { ApiOperation, ApiParam, ApiResponse } from '@nestjs/swagger';
 
 @Controller('courses')
-export class CoursesController {
-  constructor(private readonly courseService: CoursesService) {}
+export class CourseController {
+  constructor(private readonly courseService: CourseService) {}
 
   @Get()
   @ApiOperation({ summary: 'Lấy tất cả khóa học' })
