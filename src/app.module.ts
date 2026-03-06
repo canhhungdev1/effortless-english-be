@@ -6,6 +6,7 @@ import { AppService } from './app.service';
 import { databaseConfig } from './config/database.config';
 import { CourseModule } from './modules/courses/course.module';
 import { LessonModule } from './modules/lessons/lesson.module';
+import { AudioModule } from './modules/audios/audio.module';
 
 @Module({
   imports: [
@@ -17,6 +18,7 @@ import { LessonModule } from './modules/lessons/lesson.module';
     TypeOrmModule.forRoot(databaseConfig),
     LessonModule,
     CourseModule,
+    AudioModule,
   ],
   controllers: [AppController],
   providers: [AppService],
